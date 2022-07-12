@@ -5,7 +5,7 @@ const SmallCard = (props) => {
   return (
     <div className="flex items-center space-x-2 mb-5 hover:scale-105 transition duration-150 ease-out cursor-pointer hover:bg-gray-200">
       <div className="relative h-16 w-16 ">
-        <Image src={img} layout="fill" className="rounded-lg" />
+        <Image src={img} layout="fill" className="rounded-lg" alt="" />
       </div>
 
       <div>

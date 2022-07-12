@@ -8,7 +8,7 @@ const HeaderLeft = () => {
         layout="fill"
         objectFit="contain"
         objectPosition="left"
-        priority
+        alt=""
       />
     </div>
   );
