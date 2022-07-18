@@ -1,8 +1,16 @@
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 const HeaderLeft = () => {
+  const router = useRouter();
+
   return (
-    <div className="h-10 flex items-center relative cursor-pointer">
+    <div
+      onClick={() => {
+        router.push("/");
+      }}
+      className="h-10 flex items-center relative cursor-pointer"
+    >
       <Image
         src="https://links.papareact.com/qd3"
         layout="fill"
