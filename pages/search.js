@@ -1,12 +1,23 @@
 import { useRouter } from "next/router";
-import { useEffect } from "react";
 import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
 import { format } from "date-fns";
 import InfoCard from "../components/Search/InfoCard";
-//const axios = require("axios");
+//import MapBox from "../components/Map/MapBox";
+import React from "react";
+import dynamic from "next/dynamic";
+
+
 
 const Search = ({ data }) => {
+  const MapBox = React.useMemo(
+    () => dynamic(() => import("../components/Map/MapBox"), {
+      loading: () => <p>A Map is Loading</p>,
+      ssr: false,
+    }),
+    []
+  );
+
   const router = useRouter();
 
   const { location, startDate, endDate, guestNumber } = router.query;
@@ -58,6 +69,10 @@ const Search = ({ data }) => {
               );
             })}
           </div>
+        </section>
+
+        <section className="hidden lg:inline-flex lg:min-w-[550px]">
+          <MapBox data={data} />
         </section>
       </main>
       <Footer />
