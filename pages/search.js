@@ -83,7 +83,7 @@ const Search = ({ data }) => {
 export default Search;
 
 export async function getServerSideProps() {
-  const res = await fetch("https://links.papareact.com/isz");
+  const res = await fetch("https://www.jsonkeeper.com/b/5NPS");
 
   const data = await res.json();
 

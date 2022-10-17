@@ -29,10 +29,10 @@ export default function Home({ data, cardsData }) {
 
 // Get Static Props must always be called in a page component
 export async function getStaticProps() {
-  const response = await fetch("https://links.papareact.com/pyp");
+  const response = await fetch("https://www.jsonkeeper.com/b/4G1G");
   const data = await response.json();
 
-  const res = await fetch("https://links.papareact.com/zp1");
+  const res = await fetch("https://www.jsonkeeper.com/b/VHHT");
   const cardsData = await res.json();
 
   return {
